@@ -1,4 +1,4 @@
-package sample;
+package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
@@ -9,12 +9,10 @@ public class Controller {
     @FXML
     Canvas drawing_canvas;
     @FXML
-    Button btn_send_nickname, btn_create_room, btn_rooms_list, btn_send, btn_draw, btn_clear, btn_type;
+    Button btn_send_nickname, btn_create_room, btn_rooms_list, btn_send;
     Label nickname_label;
     @FXML
-    TextField tf_nickname, msg_text, choose_tf;
+    TextField tf_nickname, msg_text;
     @FXML
     TextArea dialog;
-    @FXML
-    ColorPicker color_picker;
 }

@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="429.0" maxWidth="700.0" minHeight="429.0" minWidth="700.0" prefHeight="429.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="429.0" maxWidth="900.0" minHeight="429.0" minWidth="900.0" prefHeight="429.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePanelController">
     <top>
     <MenuBar BorderPane.alignment="CENTER">
         <menus>
             <Menu mnemonicParsing="false" text="Help">
                 <items>
-<!--                    <MenuItem fx:id="myAbout" mnemonicParsing="false" text="About" />-->
-<!--                    <MenuItem fx:id="myVersion" mnemonicParsing="false" text="Version" />-->
+                    <MenuItem fx:id="myAbout" mnemonicParsing="false" text="About" />
+                    <MenuItem fx:id="myVersion" mnemonicParsing="false" text="Version" />
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Tools">
                 <items>
-<!--                    <MenuItem fx:id="myLineTool" mnemonicParsing="false" text="Line Tool" />-->
-<!--                    <MenuItem fx:id="myRectangleTool" mnemonicParsing="false" text="Rectangle Tool" />-->
-<!--                    <MenuItem fx:id="myPencilTool" mnemonicParsing="false" text="Pencil Tool" />-->
+                    <MenuItem fx:id="myLineTool" mnemonicParsing="false" text="Line Tool" />
+                    <MenuItem fx:id="myRectangleTool" mnemonicParsing="false" text="Rectangle Tool" />
+                    <MenuItem fx:id="myPencilTool" mnemonicParsing="false" text="Pencil Tool" />
                 </items>
             </Menu>
         </menus>
@@ -36,14 +36,14 @@
            <TextField fx:id="msg_text" layoutY="257.0" prefHeight="25.0" prefWidth="200.0" />
        </Pane>
    </left>
-   <center>
-       <AnchorPane maxHeight="400.0" maxWidth="700.0" minHeight="307.0" minWidth="500.0" prefHeight="307.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-           <Canvas fx:id="drawing_canvas" height="320.0" width="500.0" />
-           <TextField fx:id="choose_tf" layoutX="14.0" layoutY="331.0" prefHeight="27.0" prefWidth="222.0" />
-           <Button fx:id="btn_type" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="type" />
-           <Button fx:id="btn_clear" layoutX="318.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="clear" />
-           <Button fx:id="btn_draw" layoutX="389.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="draw" />
-           <ColorPicker fx:id="color_picker" layoutX="250.0" layoutY="331.0" />
-       </AnchorPane>
-   </center>
+<!--   <center>-->
+<!--&lt;!&ndash;       <AnchorPane maxHeight="400.0" maxWidth="700.0" minHeight="307.0" minWidth="500.0" prefHeight="307.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">&ndash;&gt;-->
+<!--&lt;!&ndash;           <Canvas fx:id="drawing_canvas" height="320.0" width="500.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;           <TextField fx:id="choose_tf" layoutX="14.0" layoutY="331.0" prefHeight="27.0" prefWidth="222.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;           <Button fx:id="btn_type" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="type" />&ndash;&gt;-->
+<!--&lt;!&ndash;           <Button fx:id="btn_clear" layoutX="318.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="clear" />&ndash;&gt;-->
+<!--&lt;!&ndash;           <Button fx:id="btn_draw" layoutX="389.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="draw" />&ndash;&gt;-->
+<!--&lt;!&ndash;           <ColorPicker fx:id="color_picker" layoutX="250.0" layoutY="331.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;       </AnchorPane>&ndash;&gt;-->
+<!--   </center>-->
 </BorderPane>

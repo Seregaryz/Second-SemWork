@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="429.0" maxWidth="700.0" minHeight="429.0" minWidth="700.0" prefHeight="429.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePanelController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="myAbout" mnemonicParsing="false" text="About" />
+                        <MenuItem fx:id="myVersion" mnemonicParsing="false" text="Version" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tools">
+                    <items>
+                        <MenuItem fx:id="myLineTool" mnemonicParsing="false" text="Line Tool" />
+                        <MenuItem fx:id="myRectangleTool" mnemonicParsing="false" text="Rectangle Tool" />
+                        <MenuItem fx:id="myPencilTool" mnemonicParsing="false" text="Pencil Tool" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
