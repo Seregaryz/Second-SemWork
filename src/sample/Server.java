@@ -15,6 +15,7 @@ public class Server {
         final int PORT = 1234;
         server = new ServerSocket(PORT);
         while (true) {
+            ////---------------------------------
             Socket client = server.accept();
             Connection connection = new Connection(client);
             clients.add(connection);

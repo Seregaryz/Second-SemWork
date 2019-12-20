@@ -1,21 +1,29 @@
 package client;
 
+import controller.CanvasController;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import packet.PicturePacket;
 
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.Scanner;
 
 public class Listener extends Thread {
 
-    PrintWriter printWriter;
+    DataOutputStream dos;
     Button sendBtn;
     TextField messageTf;
-    public Listener(OutputStream outputStream, Button sendBtn, TextField messageTf) {
-        this.printWriter = new PrintWriter(outputStream,true);
+    CanvasController canvasController;
+    public Listener(OutputStream os, Button sendBtn, TextField messageTf) throws IOException {
+        this.dos = new DataOutputStream(os);
         this.messageTf = messageTf;
         this.sendBtn = sendBtn;
+        this.canvasController = null;
     }
 
     @Override
@@ -23,7 +31,12 @@ public class Listener extends Thread {
         while (true){
             sendBtn.setOnAction(event -> {
                 String message = messageTf.getText();
-                printWriter.println(message);
+                try {
+                    dos.writeShort(1);
+                    dos.writeUTF(message);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             });
         }
     }
