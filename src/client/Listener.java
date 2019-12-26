@@ -1,17 +1,13 @@
 package client;
 
 import controller.CanvasController;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import packet.PicturePacket;
+import packet.MessagePacket;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.Scanner;
 
 public class Listener extends Thread {
 
@@ -32,8 +28,8 @@ public class Listener extends Thread {
             sendBtn.setOnAction(event -> {
                 String message = messageTf.getText();
                 try {
-                    dos.writeShort(1);
-                    dos.writeUTF(message);
+                    MessagePacket messagePacket = new MessagePacket(message);
+                    messagePacket.write(dos);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

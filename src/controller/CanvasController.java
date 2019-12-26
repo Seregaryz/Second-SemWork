@@ -1,20 +1,11 @@
 package controller;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.canvas.*;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
-import packet.PicturePacket;
-
-import java.net.Socket;
 
 public class CanvasController extends Canvas {
 
@@ -23,13 +14,10 @@ public class CanvasController extends Canvas {
     @FXML
     Canvas drawing_canvas;
     @FXML
-    Button btn_draw, btn_clear, btn_type;
-    @FXML
-    TextField choose_tf;
+    Button btn_draw, btn_clear;
     @FXML
     ColorPicker color_picker;
     private static GraphicsContext gc;
-    private double x1, y1, x2, y2;
 
 //    private CanvasController(){}
 //
@@ -41,8 +29,43 @@ public class CanvasController extends Canvas {
 //        return CanvasControllerHolder.instance;
 //    }
 
-    @FXML
-    private void initialize() {
+//    @FXML
+//    private void initialize() {
+//        gc = drawing_canvas.getGraphicsContext2D();
+//        gc.setFill(Color.WHITE);
+//        gc.fillRect(0, 0, 600, 400);
+//        gc.setStroke(Color.PURPLE);
+//
+//            btn_draw.setOnAction((event) -> {
+//                gc.setFill(color_picker.getValue());
+//                gc.setStroke(color_picker.getValue());
+//            });
+//
+//            btn_clear.setOnAction((event) -> {
+//                gc.setFill(Color.WHITE);
+//                gc.fillRect(0, 0, 600, 400);
+//                gc.save();
+//            });
+//
+//            drawing_canvas.setOnMouseDragged((MouseDragEvent) -> {
+//                gc.beginPath();
+//                gc.moveTo(MouseDragEvent.getX(), MouseDragEvent.getY());
+//                gc.lineTo(MouseDragEvent.getX(), MouseDragEvent.getY());
+//                PicturePacket pp = new PicturePacket(MouseDragEvent.getX(), MouseDragEvent.getY());
+//                try {
+//                    pp.write(new DataOutputStream(CrocodileGameClient.s.getOutputStream()));
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//                gc.stroke();
+//                gc.moveTo(MouseDragEvent.getX(), MouseDragEvent.getY());
+//                gc.closePath();
+//            });
+//        }
+//
+
+
+
 //        PicturePacket picturePacket = new PicturePacket();
 //        gc = drawing_canvas.getGraphicsContext2D();
 //        gc.setFill(Color.WHITE);
@@ -124,8 +147,8 @@ public class CanvasController extends Canvas {
 //        });
 
     }
+//
+//    public GraphicsContext getGc(){
+//        return gc;
+//    }
 
-    public GraphicsContext getGc(){
-        return gc;
-    }
-}

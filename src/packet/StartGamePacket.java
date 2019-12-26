@@ -4,14 +4,13 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class PicturePacket extends OPacket {
+public class StartGamePacket extends OPacket {
 
-    private double x, y;
-    private short id = 2;
+    private short id = 4;
+    private String word;
 
-    public PicturePacket(double x, double y) {
-        this.x = x;
-        this.y = y;
+    public StartGamePacket(String word) {
+        this.word = word;
     }
 
     @Override
@@ -22,8 +21,7 @@ public class PicturePacket extends OPacket {
     @Override
     public void write(DataOutputStream dos) throws IOException {
         dos.writeShort(id);
-        dos.writeDouble(x);
-        dos.writeDouble(y);
+        dos.writeUTF(word);
     }
 
     @Override

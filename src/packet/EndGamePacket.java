@@ -3,20 +3,10 @@ package packet;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.Socket;
 
-public class NewRoomPacket extends OPacket {
+public class EndGamePacket extends OPacket {
 
-    private Socket owner;
-    private short id = 1;
-
-    public NewRoomPacket() {
-    }
-
-    public NewRoomPacket(Socket owner) {
-        this.owner = owner;
-    }
-
+    private short id = 5;
 
     @Override
     public short getId() {
@@ -25,18 +15,11 @@ public class NewRoomPacket extends OPacket {
 
     @Override
     public void write(DataOutputStream dos) throws IOException {
-
+        dos.writeShort(id);
     }
 
     @Override
     public void read(DataInputStream dis) throws IOException {
 
     }
-
-    @Override
-    public void handle() {
-
-    }
-
-
 }

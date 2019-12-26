@@ -1,49 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.canvas.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<BorderPane maxHeight="429.0" maxWidth="900.0" minHeight="429.0" minWidth="900.0" prefHeight="429.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePanelController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="650.0" maxWidth="1250.0" minHeight="650.0" minWidth="1250.0" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamePanelController">
     <top>
     <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-            <Menu mnemonicParsing="false" text="Help">
-                <items>
-                    <MenuItem fx:id="myAbout" mnemonicParsing="false" text="About" />
-                    <MenuItem fx:id="myVersion" mnemonicParsing="false" text="Version" />
-                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Tools">
-                <items>
-                    <MenuItem fx:id="myLineTool" mnemonicParsing="false" text="Line Tool" />
-                    <MenuItem fx:id="myRectangleTool" mnemonicParsing="false" text="Rectangle Tool" />
-                    <MenuItem fx:id="myPencilTool" mnemonicParsing="false" text="Pencil Tool" />
-                </items>
-            </Menu>
-        </menus>
     </MenuBar>
 </top>
    <left>
-       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT">
-           <Button fx:id="btn_send" layoutY="309.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Send">
+       <Pane prefHeight="500.0" prefWidth="350.0"  layoutX="20.0" BorderPane.alignment="CENTER_LEFT">
+           <Button fx:id="btn_send" layoutY="530.0" layoutX="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" text="Send">
                <font>
-                   <Font size="21.0" />
+                   <Font size="24.0" />
                </font>
            </Button>
-           <TextArea fx:id="dialog" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" />
-           <TextField fx:id="msg_text" layoutY="257.0" prefHeight="25.0" prefWidth="200.0" />
+           <TextArea fx:id="dialog" layoutY="35.0" layoutX="20.0" prefHeight="400.0" prefWidth="350.0" />
+           <TextField fx:id="msg_text" layoutY="460.0" layoutX="20.0" prefHeight="40.0" prefWidth="350.0" />
        </Pane>
    </left>
-<!--   <center>-->
-<!--&lt;!&ndash;       <AnchorPane maxHeight="400.0" maxWidth="700.0" minHeight="307.0" minWidth="500.0" prefHeight="307.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">&ndash;&gt;-->
-<!--&lt;!&ndash;           <Canvas fx:id="drawing_canvas" height="320.0" width="500.0" />&ndash;&gt;-->
-<!--&lt;!&ndash;           <TextField fx:id="choose_tf" layoutX="14.0" layoutY="331.0" prefHeight="27.0" prefWidth="222.0" />&ndash;&gt;-->
-<!--&lt;!&ndash;           <Button fx:id="btn_type" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="type" />&ndash;&gt;-->
-<!--&lt;!&ndash;           <Button fx:id="btn_clear" layoutX="318.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="clear" />&ndash;&gt;-->
-<!--&lt;!&ndash;           <Button fx:id="btn_draw" layoutX="389.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="draw" />&ndash;&gt;-->
-<!--&lt;!&ndash;           <ColorPicker fx:id="color_picker" layoutX="250.0" layoutY="331.0" />&ndash;&gt;-->
-<!--&lt;!&ndash;       </AnchorPane>&ndash;&gt;-->
-<!--   </center>-->
 </BorderPane>

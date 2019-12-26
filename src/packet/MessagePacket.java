@@ -4,29 +4,28 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class PicturePacket extends OPacket {
+public class MessagePacket extends OPacket {
 
-    private double x, y;
-    private short id = 2;
+    private short id = 6;
+    private String message;
 
-    public PicturePacket(double x, double y) {
-        this.x = x;
-        this.y = y;
+    public MessagePacket(String message) {
+        this.message = message;
     }
 
     @Override
     public short getId() {
-        return id;
+        return 6;
     }
 
     @Override
     public void write(DataOutputStream dos) throws IOException {
         dos.writeShort(id);
-        dos.writeDouble(x);
-        dos.writeDouble(y);
+        dos.writeUTF(message);
     }
 
     @Override
     public void read(DataInputStream dis) throws IOException {
+
     }
 }
